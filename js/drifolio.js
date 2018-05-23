@@ -98,30 +98,36 @@ $("html").niceScroll({
 //========================
 //SMOOTHSCROLL
 //========================
-$(function() {
-  $("a[href*=#]:not([href=#])").click(function() {
-    console.log(location.pathname, location.hostname, this.hash);
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      console.log(target.length);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        console.log(target);
-        $("html,body").animate(
-          {
-            scrollTop: target.offset().top
-          },
-          1000
-        );
-        return false;
-      }
-    }
-  });
-});
+// $(function() {
+//   $("a[href*=#]:not([href=#])").click(function() {
+//     console.log(location.pathname, location.hostname, this.hash);
+//     if (
+//       location.pathname.replace(/^\//, "") ==
+//         this.pathname.replace(/^\//, "") &&
+//       location.hostname == this.hostname
+//     ) {
+//       var target = $(this.hash);
+
+//       console.log(
+//         $(this),
+//         $(this.hash),
+//         $("#about"),
+//         $(this.hash.slice(1)).prevObject.offset().top
+//       );
+
+//       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+//       if (target.length) {
+//         $("html,body").animate(
+//           {
+//             scrollTop: target.offset().top
+//           },
+//           1000
+//         );
+//         return false;
+//       }
+//     }
+//   });
+// });
 
 //========================
 //NAVBAR
