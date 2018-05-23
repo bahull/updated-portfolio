@@ -49,7 +49,9 @@ a:hover {
 img {
   max-width: 100%;
 }
-
+.myphoto img {
+  margin-top: 15%;
+}
 #services {
   text-align: center;
 }
